@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  # LibGen Chrome Extension
 
  #### Technologies
