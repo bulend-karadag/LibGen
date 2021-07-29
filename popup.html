@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <title>LibGen Book Searcher</title>
+	<script src="js/jquery.min.js"></script>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+	<div class="header">
+		<table>
+			 <tr>
+				<td rowspan="2" width="150">
+					<input type="radio" id="title" name="search" value="title">
+					<label for="title">Title</label><br>
+					<input type="radio" id="author" name="search" value="author">
+					<label for="author">Author</label><br>
+					<input type="radio" id="publisher" name="search" value="publisher">
+					<label for="author">Publisher</label><br>
+					<input type="radio" id="default" name="search" value="def" checked>
+					<label for="def">Default</label>
+				</td>
+				 <td width="200"> 
+					<!-- <input type="radio" id="book" name="type" value="book"  >
+					<label for="book">Book</label><br>
+					<input type="radio" id="article" name="type" value="article" title="Searching articles works only with default setting..." checked>
+					<label for="article" title="Searching articles works only with default setting...">Article</label><br>  -->
+				</td> 
+			 </tr>
+			 <tr>
+				<td>
+					<input type="text" id="searchInput" placeholder="Search LibGen..." class="searchText" autocomplete="on"/>
+				</td>
+				<td>
+					<button id="searchButton" type="button" class="button">Search</button>
+					<!-- <button id="testButton" type="button" class="button">Test</button> -->
+				</td>
+			 </tr>
+		</table>
+	</div>
+	
+		
+	<table id="resultsTable">
+		<tr>
+			<td style="width: 80%;">
+				<p id='booknumber' class='warning'></p> 
+				<p>Please select a book-format and language</p>
+				<p id='message' class='warning'></p> 	
+				<div id="radioExtension"></div> 
+				<div id="radioLanguage"></div> 
+						
+			<td style="width: 20%;"><button id="filterButton" type="button" class="button">Apply Filter</button><br><button id="optionsButton" type="button" class="button">Show Options</button><br><button id="downButton" type="button" class="button">Download All</button></td>			
+		</tr>
+		<tr>
+			<td><b>Book</b></td>
+			<td><b>Download</b></td>
+		</tr>
+	</table>
+  </body>
+</html>
+
