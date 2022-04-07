@@ -22,7 +22,9 @@ As there is no search API for Library Genesis, the extension makes several conne
 
  ## Versioning
 
- 1.0.0.0
+0.2.0
+
+It is updated according to the requirements of chrome extension v3.
 
  ## Autor
 

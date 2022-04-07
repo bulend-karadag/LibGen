@@ -1,33 +1,34 @@
 {
-  "manifest_version": 2,
-
-  "name": "LibGen Search & Download",
-  "description": "Search for ebooks and stuff.",
-  "version": "0.0.1",
-
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
-  },
-  "permissions": [
-    "http://gen.lib.rus.ec/*",
-    "http://libgen.is/*",
-    "http://libgen.gs/*",
-    "http://libgen.rs/*",
-    "http://libgen.lc/*",
-    "tabs",
-	"downloads"
-  ],
-  
-  "background": {
-    "persistent": false,
-    "scripts": ["background.js"]
-  	},
-  
-  "content_scripts": [{
-        "matches"	: ["http://libgen.lc/ads.php*"],
-        "run_at"	: "document_end",
-        "js"		: ["content2.js"]
-    }
+    "name": "LibGen Search & Download",
+    "description": "Search for ebooks and pdf in LibGen library.",
+    "version": "0.2.0",
+    "manifest_version": 3,
+    "icons": {
+         "32": "icon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "32": "icon.png"
+        }
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": [
+      "http://gen.lib.rus.ec/*",
+      "http://libgen.is/*",
+      "http://libgen.gs/*",
+      "http://libgen.rs/*",
+      "http://libgen.lc/*",
+      "https://libgen.rocks/*"
     ]
+
 }
+
